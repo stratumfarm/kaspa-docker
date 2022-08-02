@@ -1,0 +1,18 @@
+---
+version: "3.8"
+services:
+  kaspad:
+    build:
+      context: .
+      args:
+        KASPA_VERSION: v0.12.4
+    hostname: kaspad
+    restart: unless-stopped
+    volumes:
+      - ./kaspad/:/root/.kaspad
+    ports:
+      - 127.0.0.1:16111:16111
+      - 127.0.0.1:16110:16110
+    networks:
+      default:
+    # command:

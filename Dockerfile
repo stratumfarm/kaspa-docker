@@ -7,9 +7,9 @@ WORKDIR /app
 RUN apk --no-cache update &&\
     apk --no-cache add curl zip
 
-RUN curl -LJO https://github.com/kaspanet/kaspad/releases/download/${KASPA_VERSION}/kaspad-v0.12.4-linux.zip &&\
-    unzip kaspad-v0.12.4-linux.zip &&\
-    rm kaspad-v0.12.4-linux.zip
+RUN curl -LJO https://github.com/kaspanet/kaspad/releases/download/${KASPA_VERSION}/kaspad-${KASPA_VERSION}-linux.zip &&\
+    unzip kaspad-${KASPA_VERSION}-linux.zip &&\
+    rm kaspad-${KASPA_VERSION}-linux.zip
 
 WORKDIR /app/bin
 

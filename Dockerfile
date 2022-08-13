@@ -15,6 +15,7 @@ WORKDIR /app/bin
 
 FROM alpine:latest
 COPY --from=builder /app/bin/kaspad /usr/local/bin/kaspad
+COPY --from=builder /app/bin/kaspawallet /usr/local/bin/kaspawallet
 RUN apk --no-cache update
 
 EXPOSE 16111 16110

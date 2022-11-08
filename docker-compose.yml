@@ -5,7 +5,7 @@ services:
     build:
       context: .
       args:
-        KASPA_VERSION: v0.12.7
+        KASPA_VERSION: v0.12.9
     hostname: kaspad
     restart: unless-stopped
     volumes:
